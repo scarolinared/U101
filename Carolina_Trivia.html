@@ -1,0 +1,1376 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#73000a"><title>Carolina Classroom Challenge</title>
+<style>
+:root{--g:#73000a;--gd:#460009;--cream:#f7f2e9;--ink:#261d20;--tan:#e7d5b4;--muted:#786c6b;--green:#1c694a}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}button,input,select{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer;border:0;border-radius:12px;padding:13px 20px;background:var(--g);color:white;font-weight:700;transition:transform .12s,background .12s}button:hover:not(:disabled){background:var(--gd);transform:translateY(-1px)}button:disabled{cursor:default;opacity:.4}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #cb9b35;outline-offset:4px}.secondary{background:#e9dfd1;color:var(--ink)}.secondary:hover:not(:disabled){background:#dbccb9}.green{background:var(--green)}.outline{background:transparent;border:1px solid #cdbcb5;color:var(--g)}.small{padding:9px 13px;font-size:13px}.danger{background:#93272e}a{color:var(--g)}input{width:100%;border:1px solid #c9bbb0;background:#fffdf9;border-radius:10px;padding:15px;color:var(--ink)}label{display:block;font-size:13px;font-weight:700;margin:17px 0 7px}header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:23px 4vw;border-bottom:1px solid #dfd3c8}header .brand{font-weight:800;font-size:16px;letter-spacing:-.4px;display:flex;align-items:center;gap:11px}.mark{background:var(--g);color:var(--cream);padding:11px 10px;border-radius:10px;font-size:13px;letter-spacing:1px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--g)}main{max-width:1440px;margin:auto;padding:32px 4vw 45px}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;min-height:70vh}.hero h1{font-size:clamp(42px,5.8vw,80px);line-height:1.02;letter-spacing:-4px;margin:20px 0}.hero h1 em{font-style:normal;color:var(--g)}.intro{font-size:18px;line-height:1.65;max-width:540px;color:#6d5c5f}.pills{display:flex;gap:9px;flex-wrap:wrap;margin:26px 0}.pill{border:1px solid #d6c7b9;border-radius:25px;padding:8px 12px;font-size:12px;color:#675655}.panel{background:#fffcf7;border:1px solid #e0d3c8;border-radius:24px;padding:30px;box-shadow:0 12px 40px #45251607}.join{background:var(--g);color:white;border-radius:26px;padding:36px}.join p{color:#ead5d6;line-height:1.6}.join h2{font-size:30px;letter-spacing:-1px;margin:0}.join button{background:var(--tan);color:var(--gd);width:100%;margin-top:16px}.join input{border:0}.join label{color:#ead5d6}.hero .actions{display:flex;gap:10px;flex-wrap:wrap}.statline{display:flex;gap:28px;border-top:1px solid #ddcfc2;padding-top:25px;margin-top:35px;font-size:12px;color:var(--muted)}.statline b{display:block;color:var(--g);font-size:25px;margin-bottom:6px}.titlebar{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:25px}.titlebar h1{font-size:34px;letter-spacing:-1.4px;margin:9px 0 0}.toolbar,.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.board{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.category{font-weight:800;font-size:clamp(13px,1.35vw,20px);text-align:center;min-height:90px;display:flex;align-items:center;justify-content:center;padding:16px;background:#e9ddcb;border-radius:14px;line-height:1.2}.cell{background:var(--g);border-radius:14px;min-height:72px;font-size:clamp(22px,3vw,40px);font-weight:800;letter-spacing:-1px;color:#f1ddac}.cell:disabled{opacity:1;background:#eae2d8;color:#b4a79a}.scoreboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:28px 0 16px}.score{border:1px solid #dbcbbc;background:#fffaf2;padding:17px 20px;border-radius:15px;min-width:0}.score b{display:block;font-size:29px;color:var(--g);margin-top:9px}.score .name{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.score.active{outline:3px solid #b18b4e}.score .adjust{float:right;background:none;color:var(--g);padding:0 0 0 7px}.score small{color:#87796d}.question{text-align:center;padding:38px 5vw;background:var(--g);color:white;border-radius:25px;min-height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column}.question .eyebrow{color:#e4c694}.question h2{font-size:clamp(25px,3.1vw,45px);line-height:1.28;max-width:1030px;letter-spacing:-.8px}.question .answer{font-size:clamp(26px,3vw,39px);color:#efdaaa;border-top:1px solid #c18c92;width:100%;padding-top:20px;font-weight:700}.question .note{font-size:15px;color:#edd9d9;max-width:750px;line-height:1.6}.question a{color:#efdaaa;font-size:13px}.below{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0}.status{text-align:center;font-size:16px;color:#705c5e;margin:18px 0;line-height:1.55}.timer{font-variant-numeric:tabular-nums;font-size:22px;font-weight:800;border:1px solid #b58d90;border-radius:40px;padding:9px 18px;color:#efdaaa;min-width:90px}.lobby{display:grid;grid-template-columns:1.15fr .85fr;gap:25px}.room-code{font-size:clamp(45px,6vw,76px);font-weight:800;letter-spacing:8px;margin:10px 0;color:var(--g)}.qr{background:white;border:1px solid #ddcfc0;border-radius:16px;width:205px;height:205px;padding:13px}.qr svg{width:100%;height:100%}.join-link{display:block;word-break:break-all;font-size:13px;margin:14px 0;line-height:1.6}.team-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #eadfd2;font-weight:700}.team-row span small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:4px}.muted{color:var(--muted);font-size:14px;line-height:1.65}.notice{background:#eee1c9;border-radius:12px;padding:13px 18px;font-size:13px;line-height:1.6;margin:20px 0}.buzz{width:min(100%,440px);border-radius:28px;min-height:200px;font-size:45px;box-shadow:0 7px 0 #49000a;margin:20px auto;display:block}.buzz:disabled{box-shadow:none}.phone{max-width:620px;margin:auto}.phone h1{font-size:35px;letter-spacing:-1px}.phone .question{padding:28px;min-height:200px}.phone .question h2{font-size:25px}.finals{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px;margin:24px 0}.finals h3{margin-top:0}.submission{font-size:20px;line-height:1.5;word-break:break-word;min-height:60px}.podium{max-width:750px;margin:30px auto}.rank{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px;background:#fffaf3;border-radius:15px;margin:10px 0;border:1px solid #decab2}.rank:first-child{background:var(--g);color:#f4deb3}.rank b{font-size:28px}.rank span{font-size:20px}.foot{margin:28px 0 0;color:#9a8a7e;font-size:11px}.error{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);max-width:90vw;background:#2d1c20;color:white;padding:15px 22px;border-radius:12px;z-index:30;box-shadow:0 5px 22px #0003}.help-content{max-width:800px;margin:auto}.help-content h2{color:var(--g);margin-top:30px}.help-content p,.help-content li{line-height:1.75}.help-content li{margin-bottom:9px}.preview-board{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;transform:rotate(-3deg);margin:22px 0}.preview-board span{background:#910b1b;border:1px solid #b34b57;border-radius:8px;height:43px;display:grid;place-items:center;color:#f3d8a0;font-size:18px;font-weight:bold}.badge{display:inline-block;font-size:11px;padding:7px 10px;border-radius:30px;background:#e9dece;color:#6b4146;white-space:nowrap}button.link{background:none;color:var(--g);font-size:13px;padding:5px}.hidden{display:none}
+@media(min-width:1300px){.cell{min-height:80px}}@media(max-width:800px){header{padding:18px 20px}main{padding:25px 20px}.hero,.lobby{grid-template-columns:1fr;gap:30px}.hero{min-height:auto}.hero h1{letter-spacing:-2.4px}.join{padding:26px}.titlebar{align-items:start;flex-direction:column}.board{gap:6px}.category{font-size:11px;padding:9px 4px;min-height:77px}.cell{font-size:24px;min-height:65px;padding:10px 2px}.panel{padding:23px}.scoreboard{grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}.score{padding:13px}.score b{font-size:24px}.question{padding:30px 21px}.toolbar button{font-size:12px;padding:10px 12px}header .brand{font-size:13px}.room-code{letter-spacing:5px}.hero .intro{font-size:17px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body><header><div class="brand"><span class="mark">U101</span> Carolina Classroom Challenge</div><div class="toolbar"><span class="badge" id="connection">CLASSROOM TRIVIA</span><button class="link" data-act="help">How to play</button></div></header><main id="app"></main><div id="toast" class="error hidden" role="alert"></div>
+<script>
+const CONTENT = {  "categories": [    {      "name": "Gamecock Sports",      "tag": "01 • GO GAMECOCKS",      "clues": [        {          "id": "0-0",          "value": 100,          "q": "This feathered Gamecock mascot brings the energy on game day.",          "a": "Cocky",          "note": "Accept: Cocky.",          "source": "https://sc.edu/uofsc/posts/2026/02/one-and-only-cocky-history-of-usc-mascot.php"        },        {          "id": "0-1",          "value": 200,          "q": "Gamecock football plays its home games in this hyphenated stadium.",          "a": "Williams-Brice Stadium",          "note": "Accept: Williams-Brice or Willy B.",          "source": "https://www.sc.edu/about/offices_and_divisions/student_affairs/documents/student_life/guide_2018.pdf"        },        {          "id": "0-2",          "value": 300,          "q": "She coached South Carolina women’s basketball to its first NCAA championship in 2017.",          "a": "Dawn Staley",          "note": "Accept: Staley.",          "source": "https://www.wnba.com/news/dawn-staley-south-carolina-national-championship"        },        {          "id": "0-3",          "value": 400,          "q": "This Gamecock running back won the 1980 Heisman Trophy.",          "a": "George Rogers",          "note": "Accept: Rogers.",          "source": "https://www.heisman.com/heisman-winners/george-rogers/"        },        {          "id": "0-4",          "value": 500,          "q": "Name BOTH consecutive years when Gamecock baseball won the College World Series.",          "a": "2010 and 2011",          "note": "Both years required.",          "source": "https://storage.googleapis.com/gamecocksonline-com/2022/10/dab0ae0a-2021-22-annual-report.pdf"        },        {          "id": "0-5",          "value": 600,          "q": "In 2002, this women’s varsity sport delivered the university’s first NCAA team national championship.",          "a": "Outdoor track and field",          "note": "Accept: women’s track and field.",          "source": "https://sc.edu/uofsc/posts/2022/10/remembering_the_days_first_things_first_ep_54.php"        }      ]    },    {      "name": "USC History",      "tag": "02 • FOREVER TO THEE",      "clues": [        {          "id": "1-0",          "value": 100,          "q": "This U-shaped historic green space is the heart of USC’s original campus.",          "a": "The Horseshoe",          "note": "Accept: Horseshoe.",          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"        },        {          "id": "1-1",          "value": 200,          "q": "The university was founded in this year. Hint: it is also a familiar Gamecock rallying cry.",          "a": "1801",          "note": "Founding was in 1801; classes began in 1805.",          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"        },        {          "id": "1-2",          "value": 300,          "q": "Before it was a university, USC opened under this three-word name.",          "a": "South Carolina College",          "note": "All three words required.",          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"        },        {          "id": "1-3",          "value": 400,          "q": "Completed in 1805, this was the first building on campus.",          "a": "Rutledge College",          "note": "Accept: Rutledge.",          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"        },        {          "id": "1-4",          "value": 500,          "q": "Henrie Monteith, Robert Anderson, and James Solomon desegregated USC in this year.",          "a": "1963",          "note": "This refers to desegregation after the later segregation era. Black students had also attended during Reconstruction.",          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"        },        {          "id": "1-5",          "value": 600,          "q": "The monument in the center of the Horseshoe honors this first president of South Carolina College.",          "a": "Jonathan Maxcy",          "note": "Accept: Maxcy.",          "source": "https://sc.edu/about/our_history/university_history/presidential_commission/commission_reports/final_report/appendices/appendix-11/recommended-for-retention/maxcy_college.php"        }      ]    },    {      "name": "SC History",      "tag": "03 • THE PALMETTO STATE",      "clues": [        {          "id": "2-0",          "value": 100,          "q": "This state capital is also home to USC’s main campus.",          "a": "Columbia",          "note": "Accept: Columbia.",          "source": "https://www.sc.edu/about/our_history/"        },        {          "id": "2-1",          "value": 200,          "q": "The first shots of the Civil War in April 1861 targeted this fort in Charleston Harbor.",          "a": "Fort Sumter",          "note": "Accept: Sumter.",          "source": "https://www.nps.gov/fosu/faqs.htm"        },        {          "id": "2-2",          "value": 300,          "q": "Charleston began as Charles Town, established by English settlers in this year: 1570, 1670, or 1770.",          "a": "1670",          "note": "Accept: 1670.",          "source": "https://www.scencyclopedia.org/sce/entries/charleston/"        },        {          "id": "2-3",          "value": 400,          "q": "South Carolina was the first state to secede from the United States in December of this year.",          "a": "1860",          "note": "Accept: 1860.",          "source": "https://www.nps.gov/state/sc/index.htm"        },        {          "id": "2-4",          "value": 500,          "q": "The palmetto-log fort that resisted a British naval attack in 1776 was renamed for this commander.",          "a": "William Moultrie",          "note": "Accept: Moultrie; the fort became Fort Moultrie.",          "source": "https://www.nps.gov/fosu/faqs.htm"        },        {          "id": "2-5",          "value": 600,          "q": "This 1739 uprising near Charleston was a major act of resistance by enslaved people seeking freedom.",          "a": "The Stono Rebellion",          "note": "Accept: Stono uprising.",          "source": "https://www.scencyclopedia.org/sce/entries/stono-rebellion/"        }      ]    },    {      "name": "Business Failures",      "tag": "04 • WELL, THAT FLOPPED",      "clues": [        {          "id": "3-0",          "value": 100,          "q": "Be kind, rewind: this blue-and-yellow video rental chain filed for bankruptcy in 2010 as viewing habits changed.",          "a": "Blockbuster",          "note": "Accept: Blockbuster. The brand’s survival does not undo the original company’s bankruptcy.",          "source": "https://www.bankruptcydata.com/feeds/blog/biggest-companies-went-bankrupt"        },        {          "id": "3-1",          "value": 200,          "q": "In 1985, this soda company changed its flagship recipe, then brought back the original formula after 79 days.",          "a": "Coca-Cola",          "note": "Accept: Coke or Coca-Cola. The product flop was New Coke; the company did not fail.",          "source": "https://www.coca-colacompany.com/about-us/history/new-coke-the-most-memorable-marketing-blunder-ever"        },        {          "id": "3-2",          "value": 300,          "q": "This once-dominant photographic film company filed for Chapter 11 in 2012 during the transition to digital imaging.",          "a": "Kodak",          "note": "Accept: Eastman Kodak. Kodak later emerged from bankruptcy; avoid saying it disappeared.",          "source": "https://www.bankruptcydata.com/feeds/blog/biggest-companies-went-bankrupt"        },        {          "id": "3-3",          "value": 400,          "q": "This Houston energy company collapsed in 2001 after a massive accounting fraud.",          "a": "Enron",          "note": "Accept: Enron.",          "source": "https://www.fbi.gov/history/cases-and-criminals/enron"        },        {          "id": "3-4",          "value": 500,          "q": "A sock-puppet mascot could not save this online pet retailer, which announced its wind-down in November 2000.",          "a": "Pets.com",          "note": "Accept: Pets.com.",          "source": "https://www.sec.gov/Archives/edgar/data/1100683/000109581100004383/f66158ex99-1.txt"        },        {          "id": "3-5",          "value": 600,          "q": "Its name meant “quick bites.” This short-video streaming service announced its shutdown about six months after its 2020 launch.",          "a": "Quibi",          "note": "Accept: Quibi.",          "source": "https://www.pbs.org/newshour/arts/short-video-app-quibi-shutting-down-just-months-after-launch"        }      ]    },    {      "name": "Accounting, Actually Easy",      "tag": "05 • YOU’VE GOT THIS",      "clues": [        {          "id": "4-0",          "value": 100,          "q": "Cash, equipment, and things a business owns are called these.",          "a": "Assets",          "note": "Accept: assets.",          "source": "https://openstax.org/books/principles-financial-accounting/pages/3-2-define-and-describe-the-expanded-accounting-equation-and-its-relationship-to-analyzing-transactions"        },        {          "id": "4-1",          "value": 200,          "q": "Money a business owes to others is called this.",          "a": "A liability",          "note": "Accept: liabilities, liability, or debt.",          "source": "https://openstax.org/books/principles-financial-accounting/pages/3-2-define-and-describe-the-expanded-accounting-equation-and-its-relationship-to-analyzing-transactions"        },        {          "id": "4-2",          "value": 300,          "q": "A lemonade stand earns $100 in revenue and has $60 in expenses. Its profit is this amount.",          "a": "$40",          "note": "100 − 60 = 40.",          "source": "https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate"        },        {          "id": "4-3",          "value": 400,          "q": "Fill in the blank: Assets = Liabilities + owner’s _____.",          "a": "Equity",          "note": "Accept: equity.",          "source": "https://openstax.org/books/principles-financial-accounting/pages/3-2-define-and-describe-the-expanded-accounting-equation-and-its-relationship-to-analyzing-transactions"        },        {          "id": "4-4",          "value": 500,          "q": "This financial statement shows assets, liabilities, and equity at one specific point in time.",          "a": "The balance sheet",          "note": "Accept: balance sheet or statement of financial position.",          "source": "https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate"        },        {          "id": "4-5",          "value": 600,          "q": "A business has $1,000 in assets and $400 in liabilities. Its owner’s equity is this amount.",          "a": "$600",          "note": "Equity = assets − liabilities = 1,000 − 400 = 600.",          "source": "https://openstax.org/books/principles-financial-accounting/pages/3-2-define-and-describe-the-expanded-accounting-equation-and-its-relationship-to-analyzing-transactions"        }      ]    }  ],  "final": {    "category": "1990s Heavy Metal",    "q": "This band released its self-titled “Black Album” in 1991, featuring “Enter Sandman” and “Nothing Else Matters.”",    "a": "Metallica",    "note": "Accept: Metallica. No need to phrase the response as a question.",    "source": "https://www.metallica.com/history/"  }};//CONTENT_END
+window.QRCode=(function(){const mods={"./QR8bitByte":function(module,exports,require){
+var QRMode = require('./QRMode');
+
+function QR8bitByte(data) {
+	this.mode = QRMode.MODE_8BIT_BYTE;
+	this.data = data;
+}
+
+QR8bitByte.prototype = {
+
+	getLength : function() {
+		return this.data.length;
+	},
+	
+	write : function(buffer) {
+		for (var i = 0; i < this.data.length; i++) {
+			// not JIS ...
+			buffer.put(this.data.charCodeAt(i), 8);
+		}
+	}
+};
+
+module.exports = QR8bitByte;
+
+},"./QRBitBuffer":function(module,exports,require){
+function QRBitBuffer() {
+	this.buffer = [];
+	this.length = 0;
+}
+
+QRBitBuffer.prototype = {
+
+	get : function(index) {
+		var bufIndex = Math.floor(index / 8);
+		return ( (this.buffer[bufIndex] >>> (7 - index % 8) ) & 1) == 1;
+	},
+	
+	put : function(num, length) {
+		for (var i = 0; i < length; i++) {
+			this.putBit( ( (num >>> (length - i - 1) ) & 1) == 1);
+		}
+	},
+	
+	getLengthInBits : function() {
+		return this.length;
+	},
+	
+	putBit : function(bit) {
+	
+		var bufIndex = Math.floor(this.length / 8);
+		if (this.buffer.length <= bufIndex) {
+			this.buffer.push(0);
+		}
+	
+		if (bit) {
+			this.buffer[bufIndex] |= (0x80 >>> (this.length % 8) );
+		}
+	
+		this.length++;
+	}
+};
+
+module.exports = QRBitBuffer;
+
+},"./QRErrorCorrectLevel":function(module,exports,require){
+module.exports = {
+	L : 1,
+	M : 0,
+	Q : 3,
+	H : 2
+};
+
+
+},"./QRMaskPattern":function(module,exports,require){
+module.exports = {
+	PATTERN000 : 0,
+	PATTERN001 : 1,
+	PATTERN010 : 2,
+	PATTERN011 : 3,
+	PATTERN100 : 4,
+	PATTERN101 : 5,
+	PATTERN110 : 6,
+	PATTERN111 : 7
+};
+
+},"./QRMath":function(module,exports,require){
+var QRMath = {
+
+	glog : function(n) {
+	
+		if (n < 1) {
+			throw new Error("glog(" + n + ")");
+		}
+		
+		return QRMath.LOG_TABLE[n];
+	},
+	
+	gexp : function(n) {
+	
+		while (n < 0) {
+			n += 255;
+		}
+	
+		while (n >= 256) {
+			n -= 255;
+		}
+	
+		return QRMath.EXP_TABLE[n];
+	},
+	
+	EXP_TABLE : new Array(256),
+	
+	LOG_TABLE : new Array(256)
+
+};
+	
+for (var i = 0; i < 8; i++) {
+	QRMath.EXP_TABLE[i] = 1 << i;
+}
+for (var i = 8; i < 256; i++) {
+	QRMath.EXP_TABLE[i] = QRMath.EXP_TABLE[i - 4]
+		^ QRMath.EXP_TABLE[i - 5]
+		^ QRMath.EXP_TABLE[i - 6]
+		^ QRMath.EXP_TABLE[i - 8];
+}
+for (var i = 0; i < 255; i++) {
+	QRMath.LOG_TABLE[QRMath.EXP_TABLE[i] ] = i;
+}
+
+module.exports = QRMath;
+
+},"./QRMode":function(module,exports,require){
+module.exports = {
+    MODE_NUMBER :       1 << 0,
+    MODE_ALPHA_NUM :    1 << 1,
+    MODE_8BIT_BYTE :    1 << 2,
+    MODE_KANJI :        1 << 3
+};
+
+},"./QRPolynomial":function(module,exports,require){
+var QRMath = require('./QRMath');
+
+function QRPolynomial(num, shift) {
+	if (num.length === undefined) {
+		throw new Error(num.length + "/" + shift);
+	}
+
+	var offset = 0;
+
+	while (offset < num.length && num[offset] === 0) {
+		offset++;
+	}
+
+	this.num = new Array(num.length - offset + shift);
+	for (var i = 0; i < num.length - offset; i++) {
+		this.num[i] = num[i + offset];
+	}
+}
+
+QRPolynomial.prototype = {
+
+	get : function(index) {
+		return this.num[index];
+	},
+	
+	getLength : function() {
+		return this.num.length;
+	},
+	
+	multiply : function(e) {
+	
+		var num = new Array(this.getLength() + e.getLength() - 1);
+	
+		for (var i = 0; i < this.getLength(); i++) {
+			for (var j = 0; j < e.getLength(); j++) {
+				num[i + j] ^= QRMath.gexp(QRMath.glog(this.get(i) ) + QRMath.glog(e.get(j) ) );
+			}
+		}
+	
+		return new QRPolynomial(num, 0);
+	},
+	
+	mod : function(e) {
+	
+		if (this.getLength() - e.getLength() < 0) {
+			return this;
+		}
+	
+		var ratio = QRMath.glog(this.get(0) ) - QRMath.glog(e.get(0) );
+	
+		var num = new Array(this.getLength() );
+		
+		for (var i = 0; i < this.getLength(); i++) {
+			num[i] = this.get(i);
+		}
+		
+		for (var x = 0; x < e.getLength(); x++) {
+			num[x] ^= QRMath.gexp(QRMath.glog(e.get(x) ) + ratio);
+		}
+	
+		// recursive call
+		return new QRPolynomial(num, 0).mod(e);
+	}
+};
+
+module.exports = QRPolynomial;
+
+},"./QRRSBlock":function(module,exports,require){
+var QRErrorCorrectLevel = require('./QRErrorCorrectLevel');
+
+function QRRSBlock(totalCount, dataCount) {
+	this.totalCount = totalCount;
+	this.dataCount  = dataCount;
+}
+
+QRRSBlock.RS_BLOCK_TABLE = [
+
+	// L
+	// M
+	// Q
+	// H
+
+	// 1
+	[1, 26, 19],
+	[1, 26, 16],
+	[1, 26, 13],
+	[1, 26, 9],
+	
+	// 2
+	[1, 44, 34],
+	[1, 44, 28],
+	[1, 44, 22],
+	[1, 44, 16],
+
+	// 3
+	[1, 70, 55],
+	[1, 70, 44],
+	[2, 35, 17],
+	[2, 35, 13],
+
+	// 4		
+	[1, 100, 80],
+	[2, 50, 32],
+	[2, 50, 24],
+	[4, 25, 9],
+	
+	// 5
+	[1, 134, 108],
+	[2, 67, 43],
+	[2, 33, 15, 2, 34, 16],
+	[2, 33, 11, 2, 34, 12],
+	
+	// 6
+	[2, 86, 68],
+	[4, 43, 27],
+	[4, 43, 19],
+	[4, 43, 15],
+	
+	// 7		
+	[2, 98, 78],
+	[4, 49, 31],
+	[2, 32, 14, 4, 33, 15],
+	[4, 39, 13, 1, 40, 14],
+	
+	// 8
+	[2, 121, 97],
+	[2, 60, 38, 2, 61, 39],
+	[4, 40, 18, 2, 41, 19],
+	[4, 40, 14, 2, 41, 15],
+	
+	// 9
+	[2, 146, 116],
+	[3, 58, 36, 2, 59, 37],
+	[4, 36, 16, 4, 37, 17],
+	[4, 36, 12, 4, 37, 13],
+	
+	// 10		
+	[2, 86, 68, 2, 87, 69],
+	[4, 69, 43, 1, 70, 44],
+	[6, 43, 19, 2, 44, 20],
+	[6, 43, 15, 2, 44, 16],
+
+	// 11
+	[4, 101, 81],
+	[1, 80, 50, 4, 81, 51],
+	[4, 50, 22, 4, 51, 23],
+	[3, 36, 12, 8, 37, 13],
+
+	// 12
+	[2, 116, 92, 2, 117, 93],
+	[6, 58, 36, 2, 59, 37],
+	[4, 46, 20, 6, 47, 21],
+	[7, 42, 14, 4, 43, 15],
+
+	// 13
+	[4, 133, 107],
+	[8, 59, 37, 1, 60, 38],
+	[8, 44, 20, 4, 45, 21],
+	[12, 33, 11, 4, 34, 12],
+
+	// 14
+	[3, 145, 115, 1, 146, 116],
+	[4, 64, 40, 5, 65, 41],
+	[11, 36, 16, 5, 37, 17],
+	[11, 36, 12, 5, 37, 13],
+
+	// 15
+	[5, 109, 87, 1, 110, 88],
+	[5, 65, 41, 5, 66, 42],
+	[5, 54, 24, 7, 55, 25],
+	[11, 36, 12],
+
+	// 16
+	[5, 122, 98, 1, 123, 99],
+	[7, 73, 45, 3, 74, 46],
+	[15, 43, 19, 2, 44, 20],
+	[3, 45, 15, 13, 46, 16],
+
+	// 17
+	[1, 135, 107, 5, 136, 108],
+	[10, 74, 46, 1, 75, 47],
+	[1, 50, 22, 15, 51, 23],
+	[2, 42, 14, 17, 43, 15],
+
+	// 18
+	[5, 150, 120, 1, 151, 121],
+	[9, 69, 43, 4, 70, 44],
+	[17, 50, 22, 1, 51, 23],
+	[2, 42, 14, 19, 43, 15],
+
+	// 19
+	[3, 141, 113, 4, 142, 114],
+	[3, 70, 44, 11, 71, 45],
+	[17, 47, 21, 4, 48, 22],
+	[9, 39, 13, 16, 40, 14],
+
+	// 20
+	[3, 135, 107, 5, 136, 108],
+	[3, 67, 41, 13, 68, 42],
+	[15, 54, 24, 5, 55, 25],
+	[15, 43, 15, 10, 44, 16],
+
+	// 21
+	[4, 144, 116, 4, 145, 117],
+	[17, 68, 42],
+	[17, 50, 22, 6, 51, 23],
+	[19, 46, 16, 6, 47, 17],
+
+	// 22
+	[2, 139, 111, 7, 140, 112],
+	[17, 74, 46],
+	[7, 54, 24, 16, 55, 25],
+	[34, 37, 13],
+
+	// 23
+	[4, 151, 121, 5, 152, 122],
+	[4, 75, 47, 14, 76, 48],
+	[11, 54, 24, 14, 55, 25],
+	[16, 45, 15, 14, 46, 16],
+
+	// 24
+	[6, 147, 117, 4, 148, 118],
+	[6, 73, 45, 14, 74, 46],
+	[11, 54, 24, 16, 55, 25],
+	[30, 46, 16, 2, 47, 17],
+
+	// 25
+	[8, 132, 106, 4, 133, 107],
+	[8, 75, 47, 13, 76, 48],
+	[7, 54, 24, 22, 55, 25],
+	[22, 45, 15, 13, 46, 16],
+
+	// 26
+	[10, 142, 114, 2, 143, 115],
+	[19, 74, 46, 4, 75, 47],
+	[28, 50, 22, 6, 51, 23],
+	[33, 46, 16, 4, 47, 17],
+
+	// 27
+	[8, 152, 122, 4, 153, 123],
+	[22, 73, 45, 3, 74, 46],
+	[8, 53, 23, 26, 54, 24],
+	[12, 45, 15, 28, 46, 16],
+
+	// 28
+	[3, 147, 117, 10, 148, 118],
+	[3, 73, 45, 23, 74, 46],
+	[4, 54, 24, 31, 55, 25],
+	[11, 45, 15, 31, 46, 16],
+
+	// 29
+	[7, 146, 116, 7, 147, 117],
+	[21, 73, 45, 7, 74, 46],
+	[1, 53, 23, 37, 54, 24],
+	[19, 45, 15, 26, 46, 16],
+
+	// 30
+	[5, 145, 115, 10, 146, 116],
+	[19, 75, 47, 10, 76, 48],
+	[15, 54, 24, 25, 55, 25],
+	[23, 45, 15, 25, 46, 16],
+
+	// 31
+	[13, 145, 115, 3, 146, 116],
+	[2, 74, 46, 29, 75, 47],
+	[42, 54, 24, 1, 55, 25],
+	[23, 45, 15, 28, 46, 16],
+
+	// 32
+	[17, 145, 115],
+	[10, 74, 46, 23, 75, 47],
+	[10, 54, 24, 35, 55, 25],
+	[19, 45, 15, 35, 46, 16],
+
+	// 33
+	[17, 145, 115, 1, 146, 116],
+	[14, 74, 46, 21, 75, 47],
+	[29, 54, 24, 19, 55, 25],
+	[11, 45, 15, 46, 46, 16],
+
+	// 34
+	[13, 145, 115, 6, 146, 116],
+	[14, 74, 46, 23, 75, 47],
+	[44, 54, 24, 7, 55, 25],
+	[59, 46, 16, 1, 47, 17],
+
+	// 35
+	[12, 151, 121, 7, 152, 122],
+	[12, 75, 47, 26, 76, 48],
+	[39, 54, 24, 14, 55, 25],
+	[22, 45, 15, 41, 46, 16],
+
+	// 36
+	[6, 151, 121, 14, 152, 122],
+	[6, 75, 47, 34, 76, 48],
+	[46, 54, 24, 10, 55, 25],
+	[2, 45, 15, 64, 46, 16],
+
+	// 37
+	[17, 152, 122, 4, 153, 123],
+	[29, 74, 46, 14, 75, 47],
+	[49, 54, 24, 10, 55, 25],
+	[24, 45, 15, 46, 46, 16],
+
+	// 38
+	[4, 152, 122, 18, 153, 123],
+	[13, 74, 46, 32, 75, 47],
+	[48, 54, 24, 14, 55, 25],
+	[42, 45, 15, 32, 46, 16],
+
+	// 39
+	[20, 147, 117, 4, 148, 118],
+	[40, 75, 47, 7, 76, 48],
+	[43, 54, 24, 22, 55, 25],
+	[10, 45, 15, 67, 46, 16],
+
+	// 40
+	[19, 148, 118, 6, 149, 119],
+	[18, 75, 47, 31, 76, 48],
+	[34, 54, 24, 34, 55, 25],
+	[20, 45, 15, 61, 46, 16]
+];
+
+QRRSBlock.getRSBlocks = function(typeNumber, errorCorrectLevel) {
+	
+	var rsBlock = QRRSBlock.getRsBlockTable(typeNumber, errorCorrectLevel);
+	
+	if (rsBlock === undefined) {
+		throw new Error("bad rs block @ typeNumber:" + typeNumber + "/errorCorrectLevel:" + errorCorrectLevel);
+	}
+
+	var length = rsBlock.length / 3;
+	
+	var list = [];
+	
+	for (var i = 0; i < length; i++) {
+
+		var count = rsBlock[i * 3 + 0];
+		var totalCount = rsBlock[i * 3 + 1];
+		var dataCount  = rsBlock[i * 3 + 2];
+
+		for (var j = 0; j < count; j++) {
+			list.push(new QRRSBlock(totalCount, dataCount) );	
+		}
+	}
+	
+	return list;
+};
+
+QRRSBlock.getRsBlockTable = function(typeNumber, errorCorrectLevel) {
+
+	switch(errorCorrectLevel) {
+	case QRErrorCorrectLevel.L :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 0];
+	case QRErrorCorrectLevel.M :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 1];
+	case QRErrorCorrectLevel.Q :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 2];
+	case QRErrorCorrectLevel.H :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 3];
+	default :
+		return undefined;
+	}
+};
+
+module.exports = QRRSBlock;
+
+},"./QRUtil":function(module,exports,require){
+var QRMode = require('./QRMode');
+var QRPolynomial = require('./QRPolynomial');
+var QRMath = require('./QRMath');
+var QRMaskPattern = require('./QRMaskPattern');
+
+var QRUtil = {
+
+    PATTERN_POSITION_TABLE : [
+        [],
+        [6, 18],
+        [6, 22],
+        [6, 26],
+        [6, 30],
+        [6, 34],
+        [6, 22, 38],
+        [6, 24, 42],
+        [6, 26, 46],
+        [6, 28, 50],
+        [6, 30, 54],        
+        [6, 32, 58],
+        [6, 34, 62],
+        [6, 26, 46, 66],
+        [6, 26, 48, 70],
+        [6, 26, 50, 74],
+        [6, 30, 54, 78],
+        [6, 30, 56, 82],
+        [6, 30, 58, 86],
+        [6, 34, 62, 90],
+        [6, 28, 50, 72, 94],
+        [6, 26, 50, 74, 98],
+        [6, 30, 54, 78, 102],
+        [6, 28, 54, 80, 106],
+        [6, 32, 58, 84, 110],
+        [6, 30, 58, 86, 114],
+        [6, 34, 62, 90, 118],
+        [6, 26, 50, 74, 98, 122],
+        [6, 30, 54, 78, 102, 126],
+        [6, 26, 52, 78, 104, 130],
+        [6, 30, 56, 82, 108, 134],
+        [6, 34, 60, 86, 112, 138],
+        [6, 30, 58, 86, 114, 142],
+        [6, 34, 62, 90, 118, 146],
+        [6, 30, 54, 78, 102, 126, 150],
+        [6, 24, 50, 76, 102, 128, 154],
+        [6, 28, 54, 80, 106, 132, 158],
+        [6, 32, 58, 84, 110, 136, 162],
+        [6, 26, 54, 82, 110, 138, 166],
+        [6, 30, 58, 86, 114, 142, 170]
+    ],
+
+    G15 : (1 << 10) | (1 << 8) | (1 << 5) | (1 << 4) | (1 << 2) | (1 << 1) | (1 << 0),
+    G18 : (1 << 12) | (1 << 11) | (1 << 10) | (1 << 9) | (1 << 8) | (1 << 5) | (1 << 2) | (1 << 0),
+    G15_MASK : (1 << 14) | (1 << 12) | (1 << 10)    | (1 << 4) | (1 << 1),
+
+    getBCHTypeInfo : function(data) {
+        var d = data << 10;
+        while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) >= 0) {
+            d ^= (QRUtil.G15 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) ) );    
+        }
+        return ( (data << 10) | d) ^ QRUtil.G15_MASK;
+    },
+
+    getBCHTypeNumber : function(data) {
+        var d = data << 12;
+        while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) >= 0) {
+            d ^= (QRUtil.G18 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) ) );    
+        }
+        return (data << 12) | d;
+    },
+
+    getBCHDigit : function(data) {
+
+        var digit = 0;
+
+        while (data !== 0) {
+            digit++;
+            data >>>= 1;
+        }
+
+        return digit;
+    },
+
+    getPatternPosition : function(typeNumber) {
+        return QRUtil.PATTERN_POSITION_TABLE[typeNumber - 1];
+    },
+
+    getMask : function(maskPattern, i, j) {
+        
+        switch (maskPattern) {
+            
+        case QRMaskPattern.PATTERN000 : return (i + j) % 2 === 0;
+        case QRMaskPattern.PATTERN001 : return i % 2 === 0;
+        case QRMaskPattern.PATTERN010 : return j % 3 === 0;
+        case QRMaskPattern.PATTERN011 : return (i + j) % 3 === 0;
+        case QRMaskPattern.PATTERN100 : return (Math.floor(i / 2) + Math.floor(j / 3) ) % 2 === 0;
+        case QRMaskPattern.PATTERN101 : return (i * j) % 2 + (i * j) % 3 === 0;
+        case QRMaskPattern.PATTERN110 : return ( (i * j) % 2 + (i * j) % 3) % 2 === 0;
+        case QRMaskPattern.PATTERN111 : return ( (i * j) % 3 + (i + j) % 2) % 2 === 0;
+
+        default :
+            throw new Error("bad maskPattern:" + maskPattern);
+        }
+    },
+
+    getErrorCorrectPolynomial : function(errorCorrectLength) {
+
+        var a = new QRPolynomial([1], 0);
+
+        for (var i = 0; i < errorCorrectLength; i++) {
+            a = a.multiply(new QRPolynomial([1, QRMath.gexp(i)], 0) );
+        }
+
+        return a;
+    },
+
+    getLengthInBits : function(mode, type) {
+
+        if (1 <= type && type < 10) {
+
+            // 1 - 9
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 10;
+            case QRMode.MODE_ALPHA_NUM  : return 9;
+            case QRMode.MODE_8BIT_BYTE  : return 8;
+            case QRMode.MODE_KANJI      : return 8;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else if (type < 27) {
+
+            // 10 - 26
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 12;
+            case QRMode.MODE_ALPHA_NUM  : return 11;
+            case QRMode.MODE_8BIT_BYTE  : return 16;
+            case QRMode.MODE_KANJI      : return 10;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else if (type < 41) {
+
+            // 27 - 40
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 14;
+            case QRMode.MODE_ALPHA_NUM  : return 13;
+            case QRMode.MODE_8BIT_BYTE  : return 16;
+            case QRMode.MODE_KANJI      : return 12;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else {
+            throw new Error("type:" + type);
+        }
+    },
+
+    getLostPoint : function(qrCode) {
+        
+        var moduleCount = qrCode.getModuleCount();
+        var lostPoint = 0;
+        var row = 0; 
+        var col = 0;
+
+        
+        // LEVEL1
+        
+        for (row = 0; row < moduleCount; row++) {
+
+            for (col = 0; col < moduleCount; col++) {
+
+                var sameCount = 0;
+                var dark = qrCode.isDark(row, col);
+
+                for (var r = -1; r <= 1; r++) {
+
+                    if (row + r < 0 || moduleCount <= row + r) {
+                        continue;
+                    }
+
+                    for (var c = -1; c <= 1; c++) {
+
+                        if (col + c < 0 || moduleCount <= col + c) {
+                            continue;
+                        }
+
+                        if (r === 0 && c === 0) {
+                            continue;
+                        }
+
+                        if (dark === qrCode.isDark(row + r, col + c) ) {
+                            sameCount++;
+                        }
+                    }
+                }
+
+                if (sameCount > 5) {
+                    lostPoint += (3 + sameCount - 5);
+                }
+            }
+        }
+
+        // LEVEL2
+
+        for (row = 0; row < moduleCount - 1; row++) {
+            for (col = 0; col < moduleCount - 1; col++) {
+                var count = 0;
+                if (qrCode.isDark(row,     col    ) ) count++;
+                if (qrCode.isDark(row + 1, col    ) ) count++;
+                if (qrCode.isDark(row,     col + 1) ) count++;
+                if (qrCode.isDark(row + 1, col + 1) ) count++;
+                if (count === 0 || count === 4) {
+                    lostPoint += 3;
+                }
+            }
+        }
+
+        // LEVEL3
+
+        for (row = 0; row < moduleCount; row++) {
+            for (col = 0; col < moduleCount - 6; col++) {
+                if (qrCode.isDark(row, col) && 
+                        !qrCode.isDark(row, col + 1) && 
+                         qrCode.isDark(row, col + 2) && 
+                         qrCode.isDark(row, col + 3) && 
+                         qrCode.isDark(row, col + 4) && 
+                        !qrCode.isDark(row, col + 5) && 
+                         qrCode.isDark(row, col + 6) ) {
+                    lostPoint += 40;
+                }
+            }
+        }
+
+        for (col = 0; col < moduleCount; col++) {
+            for (row = 0; row < moduleCount - 6; row++) {
+                if (qrCode.isDark(row, col) &&
+                        !qrCode.isDark(row + 1, col) &&
+                         qrCode.isDark(row + 2, col) &&
+                         qrCode.isDark(row + 3, col) &&
+                         qrCode.isDark(row + 4, col) &&
+                        !qrCode.isDark(row + 5, col) &&
+                         qrCode.isDark(row + 6, col) ) {
+                    lostPoint += 40;
+                }
+            }
+        }
+
+        // LEVEL4
+        
+        var darkCount = 0;
+
+        for (col = 0; col < moduleCount; col++) {
+            for (row = 0; row < moduleCount; row++) {
+                if (qrCode.isDark(row, col) ) {
+                    darkCount++;
+                }
+            }
+        }
+        
+        var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+        lostPoint += ratio * 10;
+
+        return lostPoint;       
+    }
+
+};
+
+module.exports = QRUtil;
+
+},"./index":function(module,exports,require){
+//---------------------------------------------------------------------
+// QRCode for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//   http://www.opensource.org/licenses/mit-license.php
+//
+// The word "QR Code" is registered trademark of 
+// DENSO WAVE INCORPORATED
+//   http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+// Modified to work in node for this project (and some refactoring)
+//---------------------------------------------------------------------
+
+var QR8bitByte = require('./QR8bitByte');
+var QRUtil = require('./QRUtil');
+var QRPolynomial = require('./QRPolynomial');
+var QRRSBlock = require('./QRRSBlock');
+var QRBitBuffer = require('./QRBitBuffer');
+
+function QRCode(typeNumber, errorCorrectLevel) {
+	this.typeNumber = typeNumber;
+	this.errorCorrectLevel = errorCorrectLevel;
+	this.modules = null;
+	this.moduleCount = 0;
+	this.dataCache = null;
+	this.dataList = [];
+}
+
+QRCode.prototype = {
+	
+	addData : function(data) {
+		var newData = new QR8bitByte(data);
+		this.dataList.push(newData);
+		this.dataCache = null;
+	},
+	
+	isDark : function(row, col) {
+		if (row < 0 || this.moduleCount <= row || col < 0 || this.moduleCount <= col) {
+			throw new Error(row + "," + col);
+		}
+		return this.modules[row][col];
+	},
+
+	getModuleCount : function() {
+		return this.moduleCount;
+	},
+	
+	make : function() {
+		// Calculate automatically typeNumber if provided is < 1
+		if (this.typeNumber < 1 ){
+			var typeNumber = 1;
+			for (typeNumber = 1; typeNumber < 40; typeNumber++) {
+				var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, this.errorCorrectLevel);
+
+				var buffer = new QRBitBuffer();
+				var totalDataCount = 0;
+				for (var i = 0; i < rsBlocks.length; i++) {
+					totalDataCount += rsBlocks[i].dataCount;
+				}
+
+				for (var x = 0; x < this.dataList.length; x++) {
+					var data = this.dataList[x];
+					buffer.put(data.mode, 4);
+					buffer.put(data.getLength(), QRUtil.getLengthInBits(data.mode, typeNumber) );
+					data.write(buffer);
+				}
+				if (buffer.getLengthInBits() <= totalDataCount * 8)
+					break;
+			}
+			this.typeNumber = typeNumber;
+		}
+		this.makeImpl(false, this.getBestMaskPattern() );
+	},
+	
+	makeImpl : function(test, maskPattern) {
+		
+		this.moduleCount = this.typeNumber * 4 + 17;
+		this.modules = new Array(this.moduleCount);
+		
+		for (var row = 0; row < this.moduleCount; row++) {
+			
+			this.modules[row] = new Array(this.moduleCount);
+			
+			for (var col = 0; col < this.moduleCount; col++) {
+				this.modules[row][col] = null;//(col + row) % 3;
+			}
+		}
+	
+		this.setupPositionProbePattern(0, 0);
+		this.setupPositionProbePattern(this.moduleCount - 7, 0);
+		this.setupPositionProbePattern(0, this.moduleCount - 7);
+		this.setupPositionAdjustPattern();
+		this.setupTimingPattern();
+		this.setupTypeInfo(test, maskPattern);
+		
+		if (this.typeNumber >= 7) {
+			this.setupTypeNumber(test);
+		}
+	
+		if (this.dataCache === null) {
+			this.dataCache = QRCode.createData(this.typeNumber, this.errorCorrectLevel, this.dataList);
+		}
+	
+		this.mapData(this.dataCache, maskPattern);
+	},
+
+	setupPositionProbePattern : function(row, col)  {
+		
+		for (var r = -1; r <= 7; r++) {
+			
+			if (row + r <= -1 || this.moduleCount <= row + r) continue;
+			
+			for (var c = -1; c <= 7; c++) {
+				
+				if (col + c <= -1 || this.moduleCount <= col + c) continue;
+				
+				if ( (0 <= r && r <= 6 && (c === 0 || c === 6) ) || 
+                     (0 <= c && c <= 6 && (r === 0 || r === 6) ) || 
+                     (2 <= r && r <= 4 && 2 <= c && c <= 4) ) {
+					this.modules[row + r][col + c] = true;
+				} else {
+					this.modules[row + r][col + c] = false;
+				}
+			}		
+		}		
+	},
+	
+	getBestMaskPattern : function() {
+	
+		var minLostPoint = 0;
+		var pattern = 0;
+	
+		for (var i = 0; i < 8; i++) {
+			
+			this.makeImpl(true, i);
+	
+			var lostPoint = QRUtil.getLostPoint(this);
+	
+			if (i === 0 || minLostPoint >  lostPoint) {
+				minLostPoint = lostPoint;
+				pattern = i;
+			}
+		}
+	
+		return pattern;
+	},
+	
+	createMovieClip : function(target_mc, instance_name, depth) {
+	
+		var qr_mc = target_mc.createEmptyMovieClip(instance_name, depth);
+		var cs = 1;
+	
+		this.make();
+
+		for (var row = 0; row < this.modules.length; row++) {
+			
+			var y = row * cs;
+			
+			for (var col = 0; col < this.modules[row].length; col++) {
+	
+				var x = col * cs;
+				var dark = this.modules[row][col];
+			
+				if (dark) {
+					qr_mc.beginFill(0, 100);
+					qr_mc.moveTo(x, y);
+					qr_mc.lineTo(x + cs, y);
+					qr_mc.lineTo(x + cs, y + cs);
+					qr_mc.lineTo(x, y + cs);
+					qr_mc.endFill();
+				}
+			}
+		}
+		
+		return qr_mc;
+	},
+
+	setupTimingPattern : function() {
+		
+		for (var r = 8; r < this.moduleCount - 8; r++) {
+			if (this.modules[r][6] !== null) {
+				continue;
+			}
+			this.modules[r][6] = (r % 2 === 0);
+		}
+	
+		for (var c = 8; c < this.moduleCount - 8; c++) {
+			if (this.modules[6][c] !== null) {
+				continue;
+			}
+			this.modules[6][c] = (c % 2 === 0);
+		}
+	},
+	
+	setupPositionAdjustPattern : function() {
+	
+		var pos = QRUtil.getPatternPosition(this.typeNumber);
+		
+		for (var i = 0; i < pos.length; i++) {
+		
+			for (var j = 0; j < pos.length; j++) {
+			
+				var row = pos[i];
+				var col = pos[j];
+				
+				if (this.modules[row][col] !== null) {
+					continue;
+				}
+				
+				for (var r = -2; r <= 2; r++) {
+				
+					for (var c = -2; c <= 2; c++) {
+					
+						if (Math.abs(r) === 2 || 
+                            Math.abs(c) === 2 ||
+                            (r === 0 && c === 0) ) {
+							this.modules[row + r][col + c] = true;
+						} else {
+							this.modules[row + r][col + c] = false;
+						}
+					}
+				}
+			}
+		}
+	},
+	
+	setupTypeNumber : function(test) {
+	
+		var bits = QRUtil.getBCHTypeNumber(this.typeNumber);
+        var mod;
+	
+		for (var i = 0; i < 18; i++) {
+			mod = (!test && ( (bits >> i) & 1) === 1);
+			this.modules[Math.floor(i / 3)][i % 3 + this.moduleCount - 8 - 3] = mod;
+		}
+	
+		for (var x = 0; x < 18; x++) {
+			mod = (!test && ( (bits >> x) & 1) === 1);
+			this.modules[x % 3 + this.moduleCount - 8 - 3][Math.floor(x / 3)] = mod;
+		}
+	},
+	
+	setupTypeInfo : function(test, maskPattern) {
+	
+		var data = (this.errorCorrectLevel << 3) | maskPattern;
+		var bits = QRUtil.getBCHTypeInfo(data);
+        var mod;
+	
+		// vertical		
+		for (var v = 0; v < 15; v++) {
+	
+			mod = (!test && ( (bits >> v) & 1) === 1);
+	
+			if (v < 6) {
+				this.modules[v][8] = mod;
+			} else if (v < 8) {
+				this.modules[v + 1][8] = mod;
+			} else {
+				this.modules[this.moduleCount - 15 + v][8] = mod;
+			}
+		}
+	
+		// horizontal
+		for (var h = 0; h < 15; h++) {
+	
+			mod = (!test && ( (bits >> h) & 1) === 1);
+			
+			if (h < 8) {
+				this.modules[8][this.moduleCount - h - 1] = mod;
+			} else if (h < 9) {
+				this.modules[8][15 - h - 1 + 1] = mod;
+			} else {
+				this.modules[8][15 - h - 1] = mod;
+			}
+		}
+	
+		// fixed module
+		this.modules[this.moduleCount - 8][8] = (!test);
+	
+	},
+	
+	mapData : function(data, maskPattern) {
+		
+		var inc = -1;
+		var row = this.moduleCount - 1;
+		var bitIndex = 7;
+		var byteIndex = 0;
+		
+		for (var col = this.moduleCount - 1; col > 0; col -= 2) {
+	
+			if (col === 6) col--;
+	
+			while (true) {
+	
+				for (var c = 0; c < 2; c++) {
+					
+					if (this.modules[row][col - c] === null) {
+						
+						var dark = false;
+	
+						if (byteIndex < data.length) {
+							dark = ( ( (data[byteIndex] >>> bitIndex) & 1) === 1);
+						}
+	
+						var mask = QRUtil.getMask(maskPattern, row, col - c);
+	
+						if (mask) {
+							dark = !dark;
+						}
+						
+						this.modules[row][col - c] = dark;
+						bitIndex--;
+	
+						if (bitIndex === -1) {
+							byteIndex++;
+							bitIndex = 7;
+						}
+					}
+				}
+								
+				row += inc;
+	
+				if (row < 0 || this.moduleCount <= row) {
+					row -= inc;
+					inc = -inc;
+					break;
+				}
+			}
+		}
+		
+	}
+
+};
+
+QRCode.PAD0 = 0xEC;
+QRCode.PAD1 = 0x11;
+
+QRCode.createData = function(typeNumber, errorCorrectLevel, dataList) {
+	
+	var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, errorCorrectLevel);
+	
+	var buffer = new QRBitBuffer();
+	
+	for (var i = 0; i < dataList.length; i++) {
+		var data = dataList[i];
+		buffer.put(data.mode, 4);
+		buffer.put(data.getLength(), QRUtil.getLengthInBits(data.mode, typeNumber) );
+		data.write(buffer);
+	}
+
+	// calc num max data.
+	var totalDataCount = 0;
+	for (var x = 0; x < rsBlocks.length; x++) {
+		totalDataCount += rsBlocks[x].dataCount;
+	}
+
+	if (buffer.getLengthInBits() > totalDataCount * 8) {
+		throw new Error("code length overflow. (" + 
+            buffer.getLengthInBits() + 
+            ">" +  
+            totalDataCount * 8 + 
+            ")");
+	}
+
+	// end code
+	if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) {
+		buffer.put(0, 4);
+	}
+
+	// padding
+	while (buffer.getLengthInBits() % 8 !== 0) {
+		buffer.putBit(false);
+	}
+
+	// padding
+	while (true) {
+		
+		if (buffer.getLengthInBits() >= totalDataCount * 8) {
+			break;
+		}
+		buffer.put(QRCode.PAD0, 8);
+		
+		if (buffer.getLengthInBits() >= totalDataCount * 8) {
+			break;
+		}
+		buffer.put(QRCode.PAD1, 8);
+	}
+
+	return QRCode.createBytes(buffer, rsBlocks);
+};
+
+QRCode.createBytes = function(buffer, rsBlocks) {
+
+	var offset = 0;
+	
+	var maxDcCount = 0;
+	var maxEcCount = 0;
+	
+	var dcdata = new Array(rsBlocks.length);
+	var ecdata = new Array(rsBlocks.length);
+	
+	for (var r = 0; r < rsBlocks.length; r++) {
+
+		var dcCount = rsBlocks[r].dataCount;
+		var ecCount = rsBlocks[r].totalCount - dcCount;
+
+		maxDcCount = Math.max(maxDcCount, dcCount);
+		maxEcCount = Math.max(maxEcCount, ecCount);
+		
+		dcdata[r] = new Array(dcCount);
+		
+		for (var i = 0; i < dcdata[r].length; i++) {
+			dcdata[r][i] = 0xff & buffer.buffer[i + offset];
+		}
+		offset += dcCount;
+		
+		var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
+		var rawPoly = new QRPolynomial(dcdata[r], rsPoly.getLength() - 1);
+
+		var modPoly = rawPoly.mod(rsPoly);
+		ecdata[r] = new Array(rsPoly.getLength() - 1);
+		for (var x = 0; x < ecdata[r].length; x++) {
+            var modIndex = x + modPoly.getLength() - ecdata[r].length;
+			ecdata[r][x] = (modIndex >= 0)? modPoly.get(modIndex) : 0;
+		}
+
+	}
+	
+	var totalCodeCount = 0;
+	for (var y = 0; y < rsBlocks.length; y++) {
+		totalCodeCount += rsBlocks[y].totalCount;
+	}
+
+	var data = new Array(totalCodeCount);
+	var index = 0;
+
+	for (var z = 0; z < maxDcCount; z++) {
+		for (var s = 0; s < rsBlocks.length; s++) {
+			if (z < dcdata[s].length) {
+				data[index++] = dcdata[s][z];
+			}
+		}
+	}
+
+	for (var xx = 0; xx < maxEcCount; xx++) {
+		for (var t = 0; t < rsBlocks.length; t++) {
+			if (xx < ecdata[t].length) {
+				data[index++] = ecdata[t][xx];
+			}
+		}
+	}
+
+	return data;
+
+};
+
+module.exports = QRCode;
+
+}};const cache={};function req(n){if(cache[n])return cache[n].exports;const m={exports:{}};cache[n]=m;mods[n](m,m.exports,req);return m.exports}return req("./index")})();
+function newRoom(code,host){return {code,host,phase:'lobby',teams:[],used:[],active:null,buzzer:false,deadline:null,attempted:[],buzz:null,revealed:false,finalAnswers:{},wagers:{},grades:{},undo:null,created:Date.now()}}
+function apply(r,b,token,content){
+ const host=token===r.host;const t=r.teams.find(t=>t.token===token);const fail=m=>{throw Error(m)};const clue=()=>content.categories.flatMap(c=>c.clues).find(c=>c.id===r.active);
+ if(b.action==='join'){if(r.phase!=='lobby')fail('This game has already started.');if(r.teams.length>=5)fail('All five team spots are filled.');let name=String(b.name||'').trim().slice(0,24);if(!name)fail('Enter a team name.');if(r.teams.some(t=>t.name.toLowerCase()===name.toLowerCase()))fail('That team name is already taken.');r.teams.push({id:b.id,token:b.token,name,score:0});return}
+ if(!host&&!t)fail('Join this room first.');
+ if(b.action==='buzz'){if(host)fail('Use a team phone to buzz.');if(r.phase!=='clue'||!r.buzzer||r.buzz||r.revealed||r.attempted.includes(t.id)||Date.now()>r.deadline)fail('Buzzers are closed.');r.buzz=t.id;r.buzzer=false;r.deadline=null;return}
+ if(b.action==='wager'){if(!t||r.phase!=='wager')fail('Wagers are closed.');if(Object.hasOwn(r.wagers,t.id))fail('Wager already locked.');if(!Number.isInteger(b.amount)||b.amount<0||b.amount>Math.max(0,t.score))fail('Enter a whole-number wager within your available score.');r.wagers[t.id]=b.amount;return}
+ if(b.action==='answer'){if(!t||r.phase!=='final'||Date.now()>r.deadline)fail('Final answers are closed.');if(Object.hasOwn(r.finalAnswers,t.id))fail('Answer already submitted.');const answer=String(b.answer||'').trim().slice(0,200);if(!answer)fail('Enter your answer.');r.finalAnswers[t.id]=answer;return}
+ if(!host)fail('Only the host can do that.');
+ switch(b.action){
+ case 'add':if(r.phase!=='lobby')fail('Add teams in the lobby.');return apply(r,{action:'join',name:b.name,id:b.id,token:b.token},token,content);
+ case 'remove':if(r.phase!=='lobby')fail('Remove teams in the lobby.');r.teams=r.teams.filter(t=>t.id!==b.id);break;
+ case 'start':if(r.phase!=='lobby'||!r.teams.length)fail('Add at least one team first.');r.phase='board';break;
+ case 'select':if(r.phase!=='board')fail('Return to the board first.');if(r.used.includes(b.id)||!content.categories.flatMap(c=>c.clues).some(c=>c.id===b.id))fail('That clue is unavailable.');r.active=b.id;r.phase='clue';r.revealed=false;r.buzzer=false;r.buzz=null;r.attempted=[];r.deadline=null;r.undo=null;break;
+ case 'open':if(r.phase!=='clue'||r.revealed||r.buzz)fail('Buzzers cannot open now.');r.buzzer=true;r.deadline=Date.now()+30000;break;
+ case 'manual':if(r.phase!=='clue'||r.revealed||!r.teams.some(t=>t.id===b.id)||r.attempted.includes(b.id))fail('That team cannot answer this clue.');r.buzz=b.id;r.buzzer=false;r.deadline=null;break;
+ case 'judge':{if(r.phase!=='clue'||!r.buzz||r.revealed)fail('Choose a team first.');const team=r.teams.find(t=>t.id===r.buzz);r.undo={teams:JSON.parse(JSON.stringify(r.teams)),attempted:[...r.attempted],buzz:r.buzz,revealed:r.revealed};team.score+=b.correct?clue().value:-clue().value;r.attempted.push(team.id);r.buzz=null;r.buzzer=false;r.deadline=null;if(b.correct)r.revealed=true;break}
+ case 'undo':if(!r.undo||r.phase!=='clue')fail('No score to undo.');Object.assign(r,r.undo);r.undo=null;break;
+ case 'reveal':if(r.phase!=='clue')fail('Open a clue first.');r.revealed=true;r.buzzer=false;r.buzz=null;r.deadline=null;break;
+ case 'board':if(r.phase!=='clue')fail('No active clue.');if(!r.used.includes(r.active))r.used.push(r.active);r.phase='board';r.active=null;r.buzz=null;r.buzzer=false;r.deadline=null;r.undo=null;break;
+ case 'final':if(r.phase!=='board')fail('Return to the board first.');r.phase='wager';r.deadline=null;break;
+ case 'beginFinal':if(r.phase!=='wager')fail('Not in the wager round.');for(const t of r.teams)if(!Object.hasOwn(r.wagers,t.id))r.wagers[t.id]=0;r.phase='final';r.deadline=Date.now()+60000;break;
+ case 'closeFinal':if(r.phase!=='final')fail('Final round has not begun.');r.phase='reveal';r.deadline=null;break;
+ case 'gradeFinal':if(r.phase!=='reveal')fail('Close final answers first.');if(Object.hasOwn(r.grades,b.id))fail('Already scored.');const ft=r.teams.find(t=>t.id===b.id);if(!ft)fail('Unknown team.');ft.score+=(b.correct?1:-1)*r.wagers[ft.id];r.grades[ft.id]=!!b.correct;break;
+ case 'finish':if(r.phase!=='reveal'||r.teams.some(t=>!Object.hasOwn(r.grades,t.id)))fail('Score each final answer first.');r.phase='ended';break;
+ case 'adjust':{const at=r.teams.find(t=>t.id===b.id);if(!at||!Number.isInteger(b.amount)||Math.abs(b.amount)>100000)fail('Enter a whole-number adjustment.');at.score+=b.amount;break}
+ default:fail('Unknown action.');
+ }
+}
+function view(r,token,content){
+ const host=token===r.host;const me=r.teams.find(t=>t.token===token);if(!host&&!me)throw Error('Join this room first.');
+ const clue=content.categories.flatMap(c=>c.clues).find(c=>c.id===r.active);const finalVisible=['final','reveal','ended'].includes(r.phase);
+ return {code:r.code,phase:r.phase,teams:r.teams.map(({token,...t})=>t),used:r.used,active:r.active,buzzer:r.buzzer,deadline:r.deadline,attempted:r.attempted,buzz:r.buzz,revealed:r.revealed,canUndo:host&&!!r.undo,me:me?.id,isHost:host,clue:clue?{q:clue.q,value:clue.value,...((host||r.revealed)?{a:clue.a,note:clue.note,source:clue.source}:{})}:null,final:{category:content.final.category,...(finalVisible?{q:content.final.q}:{}),...(['reveal','ended'].includes(r.phase)?{a:content.final.a,note:content.final.note,source:content.final.source}:{})},wagered:Object.keys(r.wagers),submitted:Object.keys(r.finalAnswers),myWager:me?r.wagers[me.id]:undefined,myAnswer:me?r.finalAnswers[me.id]:undefined,finalAnswers:host||r.phase==='ended'?r.finalAnswers:{},wagers:host||r.phase==='ended'?r.wagers:{},grades:r.grades};
+}
+
+const HAS_SERVER = false;
+const app=document.getElementById('app');let session=null;let localRoom=null;let state=null;let lastJSON='';let help=false;let busy=false;let connected=true;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const btn=(text,act,cls='',attrs='')=>`<button class="${cls}" data-act="${act}" ${attrs}>${text}</button>`;
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),5000)}
+function stash(){try{sessionStorage.setItem('carolina-session',JSON.stringify(session));if(localRoom)localStorage.setItem('carolina-local',JSON.stringify(localRoom))}catch{}}
+function rand(){return globalThis.crypto?.randomUUID?.()||Math.random().toString(36).slice(2)}
+async function api(path,body){const r=await fetch(path,{method:body?'POST':'GET',headers:{'Content-Type':'application/json',...(session?.token?{'Authorization':'Bearer '+session.token}:{})},...(body?{body:JSON.stringify(body)}:{})});const d=await r.json();if(!r.ok)throw Error(d.error||'Could not connect.');return d}
+async function act(action,args={}){if(busy)return;busy=true;try{
+ if(session.local){apply(localRoom,{action,...args},localRoom.host,CONTENT);state=view(localRoom,localRoom.host,CONTENT);stash()}
+ else {state=await api('/api/action',{code:session.code,action,...args})}
+ lastJSON=JSON.stringify(state);render();
+ }catch(e){toast(e.message)}finally{busy=false}}
+function scores(){return `<div class="scoreboard">${state.teams.map(t=>`<div class="score ${state.buzz===t.id?'active':''}"><div class="name">${esc(t.name)}${state.isHost?btn('±','adjust','adjust',`data-id="${esc(t.id)}" title="Adjust score" aria-label="Adjust ${esc(t.name)} score"`):''}</div><b>${t.score.toLocaleString()}</b><small>POINTS</small></div>`).join('')}</div>`}
+let renderedPhase;
+function render(){
+ const phase=state?.phase||'home';
+ const fields=Array.from(document.querySelectorAll('input')).map(el=>({id:el.id,value:el.value}));
+ const active=document.activeElement?.id;const start=document.activeElement?.selectionStart;const end=document.activeElement?.selectionEnd;
+ renderNow();
+ if(renderedPhase===phase){for(const f of fields){const el=document.getElementById(f.id);if(el)el.value=f.value}const el=active&&document.getElementById(active);if(el){el.focus();try{el.setSelectionRange(start,end)}catch{}}}
+ renderedPhase=phase;
+}
+function renderNow(){if(help)return renderHelp();document.getElementById('connection').textContent=session?(session.local?'CLASSROOM MODE':connected?'LIVE • ROOM '+session.code:'RECONNECTING…'):'CLASSROOM TRIVIA';if(!state)return renderHome();if(!state.isHost)return renderPlayer();
+ if(state.phase==='lobby')return renderLobby();
+ let html=`<div class="titlebar"><div><div class="eyebrow">${session.local?'ONE SCREEN • FIVE TEAMS':'HOST DESK • ROOM '+state.code}</div><h1>${state.phase==='board'?'Pick your next challenge.':state.phase==='ended'?'That’s a wrap, Gamecocks.':state.phase==='clue'?catName(state.active):'Final Challenge'}</h1></div><div class="toolbar">${btn('Fullscreen','fullscreen','outline small')}${btn('Leave game','leave','outline small')}</div></div>`;
+ if(state.phase==='board'){
+ html+=`<div class="board">${CONTENT.categories.map(c=>`<div class="category">${esc(c.name)}</div>`).join('')}${Array.from({length:6},(_,j)=>CONTENT.categories.map(c=>{const q=c.clues[j],used=state.used.includes(q.id);return btn(used?'—':q.value,'select','cell',`data-id="${q.id}" ${used?'disabled':''} aria-label="${esc(c.name)}, ${q.value} points${used?', used':''}"`)}).join('')).join('')}</div>`;
+ html+=scores()+`<div class="titlebar"><p class="muted">${state.used.length} / 30 clues played · Higher points, tougher clues.<br>The last team to answer correctly chooses the next clue.</p>${btn('Final Challenge →','final','outline')}</div>`;
+ }else if(state.phase==='clue'){
+ html+=question(state.clue,catName(state.active)+' · '+state.clue.value+' POINTS',state.revealed);
+ if(state.revealed)html+=`<div class="below">${btn('Back to board →','board')}${state.canUndo?btn('Undo score','undo','outline'):''}</div>`;
+ else if(state.buzz){const t=state.teams.find(t=>t.id===state.buzz);html+=`<div class="status"><b>${esc(t.name)}</b> has the floor. Answer aloud.</div><div class="below">${btn('✓ Correct +'+state.clue.value,'correct','green')}${btn('✕ Incorrect −'+state.clue.value,'incorrect','danger')}</div>`}
+ else html+=`<div class="status">${state.buzzer?'Buzzers are open. First request received wins.':state.attempted.length?'Ready for a steal? Reopen buzzers or choose a team.':session.local?'Read the clue aloud, then choose the first team to raise a hand.':'Read the clue aloud, then open the buzzers.'}</div><div class="below">${!session.local?btn(state.buzzer?'Restart 30-second clock':'Open buzzers · 30 sec','open'):''}${btn('Reveal / nobody got it','reveal','outline')}${state.canUndo?btn('Undo score','undo','outline'):''}</div><div class="below">${state.teams.filter(t=>!state.attempted.includes(t.id)).map(t=>btn(esc(t.name),'manual','secondary small',`data-id="${t.id}"`)).join('')}</div>`;
+ html+=scores();
+ }else if(state.phase==='wager'){
+ html+=`<div class="question"><div class="eyebrow">FINAL CATEGORY</div><h2>${esc(state.final.category)}</h2><p>One last chance to change the leaderboard.</p></div>`;
+ if(session.local)html+=`<div class="notice">Have each team privately write a wager from 0 up to its available score (negative scores may wager 0). Record it below before revealing the clue.</div><div class="finals">${state.teams.map(t=>`<div class="panel"><h3>${esc(t.name)}</h3><p>Available: ${Math.max(0,t.score)} points</p><label for="w-${t.id}">Wager</label><input id="w-${t.id}" type="number" min="0" max="${Math.max(0,t.score)}" value="${state.wagers[t.id]??0}"></div>`).join('')}</div>`;
+ else html+=`<div class="panel"><h3>${state.wagered.length} / ${state.teams.length} wagers locked</h3>${state.teams.map(t=>`<p>${state.wagered.includes(t.id)?'✓':'○'} ${esc(t.name)}</p>`).join('')}<p class="muted">Starting without a team’s wager gives that team a wager of 0.</p></div>`;
+ html+=`<div class="below">${btn('Reveal final clue · 60 sec','beginFinal')}</div>`+scores();
+ }else if(state.phase==='final'){
+ html+=question(state.final,'1990s HEAVY METAL',false)+`<div class="status">${session.local?'Teams: write down your final answer.':state.submitted.length+' / '+state.teams.length+' answers submitted. Answers remain private.'}</div><div class="below">${btn('Close answers & reveal','closeFinal','outline')}</div>`+scores();
+ }else if(state.phase==='reveal'){
+ html+=question(state.final,'FINAL ANSWER',true)+`<div class="finals">${state.teams.map(t=>`<div class="panel"><h3>${esc(t.name)}</h3><p class="muted">Wager: ${state.wagers[t.id]??0}</p><p class="submission">${session.local?'Ask the team to reveal its written answer.':esc(state.finalAnswers[t.id]||'No answer submitted.')}</p>${Object.hasOwn(state.grades,t.id)?`<b>${state.grades[t.id]?'✓ Correct':'✕ Incorrect'} · Scored</b>`:`<div class="actions">${btn('Correct','gradeCorrect','green small',`data-id="${t.id}"`)}${btn('Incorrect','gradeIncorrect','secondary small',`data-id="${t.id}"`)}</div>`}</div>`).join('')}</div><div class="below">${btn('Show final standings →','finish','',state.teams.some(t=>!Object.hasOwn(state.grades,t.id))?'disabled':'')}</div>`+scores();
+ }else if(state.phase==='ended'){html+=standings()+`<div class="below">${btn('Play a new game','newgame')}${btn('Download scores','export','outline')}</div>`}
+ app.innerHTML=html+footer();tick();}
+function catName(id){return CONTENT.categories[Number(id?.split('-')[0])]?.name||'Challenge'}
+function footer(){return '<p class="foot">Made for University 101 · An independent classroom activity · No response-in-question-form rule.</p>'}
+function question(q,label,reveal){return `<div class="question"><div class="eyebrow">${esc(label)}</div><h2>${esc(q.q)}</h2>${state.deadline?'<div class="timer" data-timer aria-live="off"></div>':''}${reveal?`<div class="answer">${esc(q.a)}</div><p class="note">${esc(q.note)}</p>${q.source?`<a href="${esc(q.source)}" target="_blank" rel="noopener">Check the source ↗</a>`:''}`:''}</div>`}
+function standings(){const ranked=[...state.teams].sort((a,b)=>b.score-a.score);let rank=0,last=null;return `<div class="podium">${ranked.map((t,i)=>{if(t.score!==last)rank=i+1;last=t.score;return `<div class="rank"><span>${rank===1?'★':'#'+rank} &nbsp;${esc(t.name)}</span><b>${t.score.toLocaleString()}</b></div>`}).join('')}<p class="status">${ranked.filter(t=>t.score===ranked[0].score).length>1?'A tie at the top! Share the win, or ask a sudden-death question.':'Bragging rights: earned.'}</p></div>`}
+function renderHome(){const code=new URLSearchParams(location.search).get('room')||'';app.innerHTML=`<div class="hero"><div><div class="eyebrow">UNIVERSITY 101 • TEAM TRIVIA</div><h1>A little knowledge.<br><em>A lot of<br>Gamecock energy.</em></h1><p class="intro">Five categories. Thirty clues. One final riff.<br>Bring your team and your best educated guesses.</p><div class="pills"><span class="pill">Gamecock Sports</span><span class="pill">USC History</span><span class="pill">SC History</span><span class="pill">Business Failures</span><span class="pill">Easy Accounting</span></div><div class="actions">${HAS_SERVER?btn('Host a live game →','host'):''}${!HAS_SERVER?btn('Play on one screen →','offline'):''}</div>${!HAS_SERVER?'<p class="muted">This downloaded file works on one screen. Phone play requires the included server to be running.</p>':''}<div class="statline"><div><b>05</b>TEAMS</div><div><b>30</b>CLUES</div><div><b>100–600</b>POINTS</div></div></div><div class="join"><div class="eyebrow" style="color:#d9bca1;margin-bottom:15px">ONE PHONE PER TEAM</div><h2>Meet at the buzzer.</h2><p>${HAS_SERVER?'Scan your host’s QR code or enter the six-digit room code below.':'Open this game through the included server to join from a phone.'}</p><form id="joinForm"><label for="roomCode">Room code</label><input id="roomCode" name="code" inputmode="numeric" pattern="[0-9]{6}" minlength="6" maxlength="6" placeholder="000000" value="${esc(code)}" required ${!HAS_SERVER?'disabled':''}><label for="teamName">Team name</label><input id="teamName" name="team" maxlength="24" placeholder="e.g. The Cocky Accountants" autocomplete="off" required ${!HAS_SERVER?'disabled':''}><button type="submit" ${!HAS_SERVER?'disabled':''}>Join the game →</button></form><div class="preview-board" aria-hidden="true">${Array.from({length:10},(_,i)=>'<span>'+((i<5?1:2)*100)+'</span>').join('')}</div></div></div>`+footer();}
+function joinURL(){let base;try{base=sessionStorage.getItem('carolina-join-origin')||location.origin}catch{base=location.origin}return base.replace(/\/$/,'')+'/?room='+state.code}
+function renderLobby(){app.innerHTML=`<div class="titlebar"><div><div class="eyebrow">${session.local?'CLASSROOM MODE':'YOUR GAME IS READY'}</div><h1>Assemble your teams.</h1></div>${btn('Leave game','leave','outline small')}</div><div class="lobby"><div class="panel">${session.local?'<div class="eyebrow">ONE SCREEN. EVERYONE PLAYS.</div><h2>Five teams, one friendly rivalry.</h2><p class="muted">Choose a team name below to rename it. Use raised hands for buzzing and keep written final wagers private.</p>':`<div class="eyebrow">ENTER THIS ROOM CODE</div><div class="room-code">${state.code}</div><div class="qr" id="qr"></div><a class="join-link" href="${esc(joinURL())}" target="_blank" rel="noopener">${esc(joinURL())}</a><p class="muted">One phone per team. Scan to open, then choose a team name.</p>${btn('Set phone join address','origin','outline small')}<p class="muted">On a local server, use the Wi-Fi address printed in the server window. “localhost” only works on this computer.</p>`}<div class="notice">Correct answer: add the clue’s points. Incorrect: subtract them. Other teams may steal. Final wagers range from 0 to the team’s positive score.</div></div><div class="panel"><div class="eyebrow">${state.teams.length} / 5 TEAMS READY</div><h2>The starting lineup</h2>${state.teams.map((t,i)=>`<div class="team-row"><span>${session.local?btn(esc(t.name),'rename','link',`data-id="${t.id}"`):esc(t.name)}<small>TEAM ${String(i+1).padStart(2,'0')}</small></span>${btn('Remove','remove','outline small',`data-id="${t.id}"`)}</div>`).join('')}${!state.teams.length?'<p class="muted">Teams will appear here when they join.</p>':''}<div class="below">${session.local&&state.teams.length<5?btn('Add team','add','outline'):''}${btn('Start the board →','start','',!state.teams.length?'disabled':'')}</div><p class="muted">Host chooses clues and judges answers. Students answer aloud after buzzing.</p></div></div>`+footer();if(!session.local)drawQR();}
+function drawQR(){try{const q=new QRCode(-1,1);q.addData(joinURL());q.make();const n=q.getModuleCount();let paths='';for(let y=0;y<n;y++)for(let x=0;x<n;x++)if(q.isDark(y,x))paths+=`M${x+4} ${y+4}h1v1h-1z`;document.getElementById('qr').innerHTML=`<svg role="img" aria-label="Scan to join room ${state.code}" viewBox="0 0 ${n+8} ${n+8}" shape-rendering="crispEdges"><rect width="100%" height="100%" fill="white"/><path d="${paths}" fill="#000"/></svg>`}catch(e){document.getElementById('qr').textContent='Use the link or code.'}}
+function renderPlayer(){const t=state.teams.find(t=>t.id===state.me);let html=`<div class="phone"><div class="eyebrow">TEAM ${esc(t.name)} • ROOM ${state.code}</div><h1>${t.score.toLocaleString()} <span class="muted">points</span></h1>`;
+ if(state.phase==='lobby')html+=`<div class="panel"><h2>You’re on the roster.</h2><p class="muted">Keep this screen open. Your host will start the game shortly.</p></div>`;
+ if(state.phase==='board')html+=`<div class="panel"><h2>Eyes on the board.</h2><p class="muted">Your host is choosing the next clue. Discuss with your teammates, then get ready to buzz.</p></div>`;
+ if(state.phase==='clue'){
+ html+=question(state.clue,catName(state.active)+' · '+state.clue.value+' POINTS',state.revealed);
+ const can=state.buzzer&&!state.buzz&&!state.revealed&&!state.attempted.includes(t.id)&&Date.now()<state.deadline;
+ html+=btn(state.revealed?'ANSWER REVEALED':state.buzz===t.id?'YOU’RE UP!':state.buzz?'TEAM ANSWERING':state.attempted.includes(t.id)?'WAIT FOR NEXT CLUE':can?'BUZZ!':'WAIT FOR HOST','buzz','buzz',`${!can?'disabled':''}`)+`<p class="status">${state.buzz===t.id?'Give your answer aloud.':can?'Tap once when your team has an answer.':'Follow along on the host screen.'}</p>`;
+ }if(state.phase==='wager'){const max=Math.max(0,t.score);html+=`<div class="panel"><div class="eyebrow">FINAL CATEGORY</div><h2>${esc(state.final.category)}</h2>${state.wagered.includes(t.id)?`<h3>Wager locked: ${state.myWager}</h3><p class="muted">Wait for the final clue.</p>`:`<p class="muted">Wager 0–${max} points. Your wager stays private until results. Negative scores may wager 0.</p><form id="wagerForm"><label for="wager">Your wager</label><input id="wager" type="number" min="0" max="${max}" step="1" value="0" required><div class="below"><button>Lock wager</button></div></form>`}</div>`}
+ if(state.phase==='final'){html+=question(state.final,'FINAL CHALLENGE',false);html+=state.submitted.includes(t.id)?`<p class="status">Answer locked: <b>${esc(state.myAnswer)}</b><br>Good luck!</p>`:`<form id="answerForm"><label for="finalAnswer">Your team’s final answer</label><input id="finalAnswer" maxlength="200" required autocomplete="off" placeholder="Name the band"><div class="below"><button id="submitFinal">Lock final answer</button></div></form>`}
+ if(state.phase==='reveal')html+=question(state.final,'FINAL ANSWER',true)+`<p class="status">Your host is scoring the final round.</p>`;
+ if(state.phase==='ended')html+=standings();html+=scores()+`<div class="below">${btn('Leave game','leave','outline small')}</div></div>`;app.innerHTML=html;tick();}
+function renderHelp(){app.innerHTML=`<div class="help-content"><div class="eyebrow">THE PLAYBOOK</div><h1>Knowledge meets friendly competition.</h1><h2>1. Get five teams ready</h2><p>Each team picks one captain and one phone. In a live game, the captain scans the QR code or opens the host’s game address and enters the six-digit room code. The host shares their screen with the class.</p><h2>2. Choose a clue</h2><p>There are six clues in each of five categories. Values run from 100 to 600 points, with difficulty increasing down each column. Accounting stays beginner-friendly throughout. The host opens the selected clue and reads it aloud.</p><h2>3. Buzz, answer, score</h2><p>When the host opens the buzzers, captains have 30 seconds to buzz. The first request received by the server wins; network delays can affect order. That team answers aloud. A correct answer earns the clue’s value; a wrong answer loses it and makes the team ineligible for another attempt on that clue. Reopen buzzers to allow a steal. The last correct team chooses the next clue; the host decides who starts.</p><p>Host buttons also let you choose a team manually. Use this for raised-hand play on one screen or to resolve a disputed buzz. Answers do not need to be phrased as questions. The ± control adjusts a score; “Undo score” reverses the most recent clue judgment while the clue is open.</p><h2>4. The final riff</h2><p>The final category is 1990s Heavy Metal. Lock wagers before revealing the clue. Each team may wager 0 up to its positive score; teams at 0 or below can wager 0. A missing wager defaults to 0 when the host starts. Teams have 60 seconds to submit a private answer. The host closes answers, reveals the solution, and judges each response. A missing answer is incorrect. Highest score wins; ties share the win unless you choose a sudden-death question.</p><h2>One-screen mode</h2><p>The standalone HTML file runs without internet. Use raised hands to buzz, then select a team to answer. For the final, teams write wagers and answers on paper; enter wagers before revealing the clue.</p><h2>Phone connections</h2><p>Live phone play requires the included server to run on a computer reachable by the phones, or deployment to a public Node.js host. On the same Wi-Fi, set the phone join address to the network address printed by the server. Some campus networks block device-to-device traffic, so test this in your classroom. Downloaded HTML alone cannot synchronize phones.</p><p>Live rooms use team nicknames only, allow up to five teams, and expire after 24 hours. Restarting the server clears all rooms. Keep the host tab open; host and team access are remembered in that browser tab. One-screen games save in this browser when storage is available. Rejoining from another browser creates a new team; remove the old team in the lobby if necessary.</p><div class="below">${btn('Back to game','back')}</div></div>`;}
+function tick(){if(!state)return;const left=Math.max(0,Math.ceil((state.deadline-Date.now())/1000));document.querySelectorAll('[data-timer]').forEach(el=>el.textContent=left+' sec');if(state.deadline&&left===0){const b=document.querySelector('[data-act="buzz"]');if(b)b.disabled=true;const f=document.getElementById('submitFinal');if(f)f.disabled=true;}}
+async function startOffline(){localRoom=newRoom('LOCAL',rand());for(let i=1;i<=5;i++)apply(localRoom,{action:'join',name:'Team '+i,id:rand(),token:rand()},null,CONTENT);session={local:true,token:localRoom.host,code:'LOCAL'};state=view(localRoom,localRoom.host,CONTENT);stash();render()}
+async function createLive(){try{session=await api('/api/create',{});state=await api('/api/state?code='+session.code);stash();render()}catch(e){toast('Live hosting needs the included server. '+e.message)}}
+app.addEventListener('submit',async e=>{e.preventDefault();if(busy)return;const form=e.target;try{if(form.id==='joinForm'){busy=true;session=await api('/api/action',{action:'join',code:document.getElementById('roomCode').value,name:document.getElementById('teamName').value});stash();state=await api('/api/state?code='+session.code);render();busy=false}else if(form.id==='wagerForm')await act('wager',{amount:Number(document.getElementById('wager').value)});else if(form.id==='answerForm')await act('answer',{answer:document.getElementById('finalAnswer').value});}catch(e){busy=false;toast(e.message)}});
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-act]');if(!b||b.disabled)return;const a=b.dataset.act,id=b.dataset.id;
+ if(a==='help'){help=true;renderHelp();return}if(a==='back'){help=false;render();return}
+ if(a==='host')return createLive();if(a==='offline')return startOffline();
+ if(a==='fullscreen'){try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen();else await document.exitFullscreen()}catch{toast('Use your browser’s fullscreen option.')}return}
+ if(a==='leave'||a==='newgame'){if(!confirm(a==='newgame'?'Start a fresh game? Your current scores will remain only in this session.':'Leave this game on this device?'))return;session=null;state=null;localRoom=null;try{sessionStorage.removeItem('carolina-session');localStorage.removeItem('carolina-local')}catch{}lastJSON='';history.replaceState(null,'',location.pathname);render();return}
+ if(a==='origin'){let url=prompt('Enter the address phones can reach (for example, http://192.168.1.20:3000).',sessionStorage.getItem('carolina-join-origin')||location.origin);if(!url)return;try{const u=new URL(url);if(!['http:','https:'].includes(u.protocol))throw Error();sessionStorage.setItem('carolina-join-origin',u.origin);render()}catch{toast('Enter a valid http:// or https:// address.')}return}
+ if(a==='adjust'){const n=prompt('Point adjustment for this team (use a minus sign to subtract):','0');if(n===null)return;return act('adjust',{id,amount:Number(n)})}
+ if(a==='rename'&&session.local){const n=prompt('Team name:',localRoom.teams.find(t=>t.id===id).name);if(!n?.trim())return;const name=n.trim().slice(0,24);if(localRoom.teams.some(t=>t.id!==id&&t.name.toLowerCase()===name.toLowerCase()))return toast('Choose a unique team name.');localRoom.teams.find(t=>t.id===id).name=name;state=view(localRoom,localRoom.host,CONTENT);stash();render();return}
+ if(a==='add'){const name=prompt('Team name:');if(!name)return;return act('add',{name,id:rand(),token:rand()})}
+ if(a==='final'&&state.used.length<30&&!confirm('Go to Final Challenge with '+(30-state.used.length)+' clues remaining?'))return;
+ if(a==='beginFinal'&&session.local){for(const t of localRoom.teams){const n=Number(document.getElementById('w-'+t.id).value);if(!Number.isInteger(n)||n<0||n>Math.max(0,t.score))return toast('Check the wager for '+t.name);localRoom.wagers[t.id]=n}}
+ if(a==='export'){const csv='Team,Score\n'+[...state.teams].sort((a,b)=>b.score-a.score).map(t=>'"'+t.name.replaceAll('"','""')+'",'+t.score).join('\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));const l=document.createElement('a');l.href=url;l.download='Carolina_Trivia_Scores.csv';l.click();URL.revokeObjectURL(url);return}
+ const map={correct:'judge',incorrect:'judge',gradeCorrect:'gradeFinal',gradeIncorrect:'gradeFinal'};await act(map[a]||a,{id,...(['correct','incorrect','gradeCorrect','gradeIncorrect'].includes(a)?{correct:a==='correct'||a==='gradeCorrect'}:{})});});
+async function poll(){if(!session||session.local||busy)return;try{const s=await api('/api/state?code='+session.code);connected=true;const str=JSON.stringify(s);if(str!==lastJSON){state=s;lastJSON=str;render()}document.getElementById('connection').textContent='LIVE • ROOM '+session.code}catch(e){connected=false;document.getElementById('connection').textContent='RECONNECTING…'}}
+try{session=JSON.parse(sessionStorage.getItem('carolina-session'));if(session?.local&&HAS_SERVER){session=null}else if(session?.local){localRoom=JSON.parse(localStorage.getItem('carolina-local'));if(localRoom)state=view(localRoom,localRoom.host,CONTENT);else session=null}else if(session&&!HAS_SERVER)session=null}catch{session=null}
+render();poll();setInterval(poll,700);setInterval(tick,250);
+</script></body></html>
