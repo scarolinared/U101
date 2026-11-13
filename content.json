@@ -1,0 +1,281 @@
+{
+  "categories": [
+    {
+      "name": "Gamecock Sports",
+      "tag": "01 • GO GAMECOCKS",
+      "clues": [
+        {
+          "id": "0-0",
+          "value": 100,
+          "q": "This feathered Gamecock mascot brings the energy on game day.",
+          "a": "Cocky",
+          "note": "Accept: Cocky.",
+          "source": "https://sc.edu/uofsc/posts/2026/02/one-and-only-cocky-history-of-usc-mascot.php"
+        },
+        {
+          "id": "0-1",
+          "value": 200,
+          "q": "Gamecock football plays its home games in this hyphenated stadium.",
+          "a": "Williams-Brice Stadium",
+          "note": "Accept: Williams-Brice or Willy B.",
+          "source": "https://www.sc.edu/about/offices_and_divisions/student_affairs/documents/student_life/guide_2018.pdf"
+        },
+        {
+          "id": "0-2",
+          "value": 300,
+          "q": "She coached South Carolina women’s basketball to its first NCAA championship in 2017.",
+          "a": "Dawn Staley",
+          "note": "Accept: Staley.",
+          "source": "https://www.wnba.com/news/dawn-staley-south-carolina-national-championship"
+        },
+        {
+          "id": "0-3",
+          "value": 400,
+          "q": "This Gamecock running back won the 1980 Heisman Trophy.",
+          "a": "George Rogers",
+          "note": "Accept: Rogers.",
+          "source": "https://www.heisman.com/heisman-winners/george-rogers/"
+        },
+        {
+          "id": "0-4",
+          "value": 500,
+          "q": "Name BOTH consecutive years when Gamecock baseball won the College World Series.",
+          "a": "2010 and 2011",
+          "note": "Both years required.",
+          "source": "https://storage.googleapis.com/gamecocksonline-com/2022/10/dab0ae0a-2021-22-annual-report.pdf"
+        },
+        {
+          "id": "0-5",
+          "value": 600,
+          "q": "In 2002, this women’s varsity sport delivered the university’s first NCAA team national championship.",
+          "a": "Outdoor track and field",
+          "note": "Accept: women’s track and field.",
+          "source": "https://sc.edu/uofsc/posts/2022/10/remembering_the_days_first_things_first_ep_54.php"
+        }
+      ]
+    },
+    {
+      "name": "USC History",
+      "tag": "02 • FOREVER TO THEE",
+      "clues": [
+        {
+          "id": "1-0",
+          "value": 100,
+          "q": "This U-shaped historic green space is the heart of USC’s original campus.",
+          "a": "The Horseshoe",
+          "note": "Accept: Horseshoe.",
+          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"
+        },
+        {
+          "id": "1-1",
+          "value": 200,
+          "q": "The university was founded in this year. Hint: it is also a familiar Gamecock rallying cry.",
+          "a": "1801",
+          "note": "Founding was in 1801; classes began in 1805.",
+          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"
+        },
+        {
+          "id": "1-2",
+          "value": 300,
+          "q": "Before it was a university, USC opened under this three-word name.",
+          "a": "South Carolina College",
+          "note": "All three words required.",
+          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"
+        },
+        {
+          "id": "1-3",
+          "value": 400,
+          "q": "Completed in 1805, this was the first building on campus.",
+          "a": "Rutledge College",
+          "note": "Accept: Rutledge.",
+          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"
+        },
+        {
+          "id": "1-4",
+          "value": 500,
+          "q": "Henrie Monteith, Robert Anderson, and James Solomon desegregated USC in this year.",
+          "a": "1963",
+          "note": "This refers to desegregation after the later segregation era. Black students had also attended during Reconstruction.",
+          "source": "https://www.sc.edu/about/our_history/university_history/timeline/index.php"
+        },
+        {
+          "id": "1-5",
+          "value": 600,
+          "q": "The monument in the center of the Horseshoe honors this first president of South Carolina College.",
+          "a": "Jonathan Maxcy",
+          "note": "Accept: Maxcy.",
+          "source": "https://sc.edu/about/our_history/university_history/presidential_commission/commission_reports/final_report/appendices/appendix-11/recommended-for-retention/maxcy_college.php"
+        }
+      ]
+    },
+    {
+      "name": "SC History",
+      "tag": "03 • THE PALMETTO STATE",
+      "clues": [
+        {
+          "id": "2-0",
+          "value": 100,
+          "q": "This state capital is also home to USC’s main campus.",
+          "a": "Columbia",
+          "note": "Accept: Columbia.",
+          "source": "https://www.sc.edu/about/our_history/"
+        },
+        {
+          "id": "2-1",
+          "value": 200,
+          "q": "The first shots of the Civil War in April 1861 targeted this fort in Charleston Harbor.",
+          "a": "Fort Sumter",
+          "note": "Accept: Sumter.",
+          "source": "https://www.nps.gov/fosu/faqs.htm"
+        },
+        {
+          "id": "2-2",
+          "value": 300,
+          "q": "Charleston began as Charles Town, established by English settlers in this year: 1570, 1670, or 1770.",
+          "a": "1670",
+          "note": "Accept: 1670.",
+          "source": "https://www.scencyclopedia.org/sce/entries/charleston/"
+        },
+        {
+          "id": "2-3",
+          "value": 400,
+          "q": "South Carolina was the first state to secede from the United States in December of this year.",
+          "a": "1860",
+          "note": "Accept: 1860.",
+          "source": "https://www.nps.gov/state/sc/index.htm"
+        },
+        {
+          "id": "2-4",
+          "value": 500,
+          "q": "The palmetto-log fort that resisted a British naval attack in 1776 was renamed for this commander.",
+          "a": "William Moultrie",
+          "note": "Accept: Moultrie; the fort became Fort Moultrie.",
+          "source": "https://www.nps.gov/fosu/faqs.htm"
+        },
+        {
+          "id": "2-5",
+          "value": 600,
+          "q": "This 1739 uprising near Charleston was a major act of resistance by enslaved people seeking freedom.",
+          "a": "The Stono Rebellion",
+          "note": "Accept: Stono uprising.",
+          "source": "https://www.scencyclopedia.org/sce/entries/stono-rebellion/"
+        }
+      ]
+    },
+    {
+      "name": "Business Failures",
+      "tag": "04 • WELL, THAT FLOPPED",
+      "clues": [
+        {
+          "id": "3-0",
+          "value": 100,
+          "q": "Be kind, rewind: this blue-and-yellow video rental chain filed for bankruptcy in 2010 as viewing habits changed.",
+          "a": "Blockbuster",
+          "note": "Accept: Blockbuster. The brand’s survival does not undo the original company’s bankruptcy.",
+          "source": "https://www.bankruptcydata.com/feeds/blog/biggest-companies-went-bankrupt"
+        },
+        {
+          "id": "3-1",
+          "value": 200,
+          "q": "In 1985, this soda company changed its flagship recipe, then brought back the original formula after 79 days.",
+          "a": "Coca-Cola",
+          "note": "Accept: Coke or Coca-Cola. The product flop was New Coke; the company did not fail.",
+          "source": "https://www.coca-colacompany.com/about-us/history/new-coke-the-most-memorable-marketing-blunder-ever"
+        },
+        {
+          "id": "3-2",
+          "value": 300,
+          "q": "This once-dominant photographic film company filed for Chapter 11 in 2012 during the transition to digital imaging.",
+          "a": "Kodak",
+          "note": "Accept: Eastman Kodak. Kodak later emerged from bankruptcy; avoid saying it disappeared.",
+          "source": "https://www.bankruptcydata.com/feeds/blog/biggest-companies-went-bankrupt"
+        },
+        {
+          "id": "3-3",
+          "value": 400,
+          "q": "This Houston energy company collapsed in 2001 after a massive accounting fraud.",
+          "a": "Enron",
+          "note": "Accept: Enron.",
+          "source": "https://www.fbi.gov/history/cases-and-criminals/enron"
+        },
+        {
+          "id": "3-4",
+          "value": 500,
+          "q": "A sock-puppet mascot could not save this online pet retailer, which announced its wind-down in November 2000.",
+          "a": "Pets.com",
+          "note": "Accept: Pets.com.",
+          "source": "https://www.sec.gov/Archives/edgar/data/1100683/000109581100004383/f66158ex99-1.txt"
+        },
+        {
+          "id": "3-5",
+          "value": 600,
+          "q": "Its name meant “quick bites.” This short-video streaming service announced its shutdown about six months after its 2020 launch.",
+          "a": "Quibi",
+          "note": "Accept: Quibi.",
+          "source": "https://www.pbs.org/newshour/arts/short-video-app-quibi-shutting-down-just-months-after-launch"
+        }
+      ]
+    },
+    {
+      "name": "Accounting, Actually Easy",
+      "tag": "05 • YOU’VE GOT THIS",
+      "clues": [
+        {
+          "id": "4-0",
+          "value": 100,
+          "q": "Cash, equipment, and things a business owns are called these.",
+          "a": "Assets",
+          "note": "Accept: assets.",
+          "source": "https://openstax.org/books/principles-financial-accounting/pages/3-2-define-and-describe-the-expanded-accounting-equation-and-its-relationship-to-analyzing-transactions"
+        },
+        {
+          "id": "4-1",
+          "value": 200,
+          "q": "Money a business owes to others is called this.",
+          "a": "A liability",
+          "note": "Accept: liabilities, liability, or debt.",
+          "source": "https://openstax.org/books/principles-financial-accounting/pages/3-2-define-and-describe-the-expanded-accounting-equation-and-its-relationship-to-analyzing-transactions"
+        },
+        {
+          "id": "4-2",
+          "value": 300,
+          "q": "A lemonade stand earns $100 in revenue and has $60 in expenses. Its profit is this amount.",
+          "a": "$40",
+          "note": "100 − 60 = 40.",
+          "source": "https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate"
+        },
+        {
+          "id": "4-3",
+          "value": 400,
+          "q": "Fill in the blank: Assets = Liabilities + owner’s _____.",
+          "a": "Equity",
+          "note": "Accept: equity.",
+          "source": "https://openstax.org/books/principles-financial-accounting/pages/3-2-define-and-describe-the-expanded-accounting-equation-and-its-relationship-to-analyzing-transactions"
+        },
+        {
+          "id": "4-4",
+          "value": 500,
+          "q": "This financial statement shows assets, liabilities, and equity at one specific point in time.",
+          "a": "The balance sheet",
+          "note": "Accept: balance sheet or statement of financial position.",
+          "source": "https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate"
+        },
+        {
+          "id": "4-5",
+          "value": 600,
+          "q": "A business has $1,000 in assets and $400 in liabilities. Its owner’s equity is this amount.",
+          "a": "$600",
+          "note": "Equity = assets − liabilities = 1,000 − 400 = 600.",
+          "source": "https://openstax.org/books/principles-financial-accounting/pages/3-2-define-and-describe-the-expanded-accounting-equation-and-its-relationship-to-analyzing-transactions"
+        }
+      ]
+    }
+  ],
+  "final": {
+    "category": "1990s Heavy Metal",
+    "q": "This band released its self-titled “Black Album” in 1991, featuring “Enter Sandman” and “Nothing Else Matters.”",
+    "a": "Metallica",
+    "note": "Accept: Metallica. No need to phrase the response as a question.",
+    "source": "https://www.metallica.com/history/"
+  }
+}

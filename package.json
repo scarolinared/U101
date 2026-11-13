@@ -1,0 +1,12 @@
+{
+  "name": "carolina-classroom-challenge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test-game.mjs && node test-api.mjs && node test-ui.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,10 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const els=new Map();const element=id=>{if(!els.has(id))els.set(id,{id,innerHTML:'',textContent:'',classList:{add(){},remove(){}},value:'',addEventListener(){},focus(){}});return els.get(id)};
+const document={getElementById:element,querySelectorAll(){return[]},querySelector(){return null},addEventListener(){},activeElement:null};const store=()=>({getItem(){return null},setItem(){},removeItem(){}});
+const sandbox={document,window:{},sessionStorage:store(),localStorage:store(),location:{search:'',origin:'null',pathname:'/'},history:{replaceState(){}},URLSearchParams,URL,Blob,setTimeout(){},setInterval(){},console,crypto:{randomUUID:()=>Math.random().toString(36)},confirm:()=>true};
+sandbox.window=sandbox;vm.createContext(sandbox);const script=fs.readFileSync('Carolina_Trivia.html','utf8').match(/<script>([\s\S]*?)<\/script>/)[1];vm.runInContext(script,sandbox);assert(element('app').innerHTML.includes('Five categories.'));
+vm.runInContext('startOffline()',sandbox);assert(element('app').innerHTML.includes('starting lineup'));
+vm.runInContext("act('start')",sandbox);assert.equal((element('app').innerHTML.match(/class=\"cell\"/g)||[]).length,30);
+vm.runInContext("act('select',{id:'0-0'})",sandbox);assert(element('app').innerHTML.includes('feathered'));assert(!element('app').innerHTML.includes('Check the source'));
+vm.runInContext("act('reveal')",sandbox);assert(element('app').innerHTML.includes('Check the source'));vm.runInContext("act('board');act('final')",sandbox);assert(element('app').innerHTML.includes('One last chance'));
+console.log('PASS: frontend renders home, five-team lobby, all 30 board cells, clue, answer reveal, and final wager screen without runtime errors.');
